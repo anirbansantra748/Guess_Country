@@ -591,6 +591,8 @@ btn.addEventListener("click", function () {
     // Add more countries here...
       };
 
+      let a = 0;
+      let b = a / 0;
       for (let country of countries) {
         let countryId = country.country_id;
         if (countryMap.hasOwnProperty(countryId)) {
