@@ -596,7 +596,7 @@ btn.addEventListener("click", function () {
       // app.js — sample with intentional issues
 
 // ❌ Unused variable
-const unusedVar = 42;
+const unusedVar = 42
 
 // ❌ Missing semicolon
 function sayHello(name) {
