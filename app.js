@@ -593,6 +593,23 @@ btn.addEventListener("click", function () {
 
       let a = 0/0
       let b = a / 0;
+      // app.js — sample with intentional issues
+
+// ❌ Unused variable
+const unusedVar = 42;
+
+// ❌ Missing semicolon
+function sayHello(name) {
+  console.log("Hello " + name)
+}
+
+// ❌ Unsafe innerHTML usage (security)
+document.getElementById('output').innerHTML = window.location.search;
+
+// ❌ Console log left in production
+console.log("Debug: app started");
+
+
       abc
       for (let country of countries) {
         let countryId = country.country_id;
@@ -613,3 +630,6 @@ btn.addEventListener("click", function () {
       para.innerText = "Error fetching data";
     });
 });
+
+// ✅ Export something (so code still runs)
+export default sayHello;

@@ -9,6 +9,11 @@
 </head>
 <body>
 
+    <!-- ❌ Missing alt attribute -->
+    <img src="logo.png">
+
+    <!-- ❌ Inline event handler (Semgrep/ESLint accessibility rule) -->
+    <button onclick="alert('clicked!')">Click</button>
     <div class="input-div">
         <h1 style="color: aliceblue;" id="h1">Enter your Name and We guess your country</h1>
     <input type="text" id="name">
