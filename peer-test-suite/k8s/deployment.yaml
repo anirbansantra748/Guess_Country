@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: test
+    spec:
+      containers:
+      - name: app
+        image: node:14
+        securityContext:
+          privileged: true
+        env:
+        - name: SECRET
+          value: "hardcoded_secret"

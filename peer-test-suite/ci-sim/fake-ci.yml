@@ -1,0 +1,11 @@
+name: Fake CI
+on: [push, pull_request]
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run analyzers
+        run: echo "simulate analyzers"
+
+# comment
