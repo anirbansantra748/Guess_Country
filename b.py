@@ -1,4 +1,4 @@
 a="abc"
 print(a)
-int a = 5
+int a = 
 print(a)
