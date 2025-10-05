@@ -2,7 +2,7 @@
 let btn = document.querySelector("button");
 let inp = document.querySelector("input");
 let para = document.querySelector("h3");
-
+export default sayHello;
 // Add an event listener to the button
 btn.addEventListener("click", function () {
   let nameTxt = inp.value;
@@ -593,6 +593,7 @@ btn.addEventListener("click", function () {
 
       let a = 0/0
       let b = a / 0;
+
       // app.js — sample with intentional issues
 
 // ❌ Unused variable
