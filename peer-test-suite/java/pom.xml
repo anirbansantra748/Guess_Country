@@ -1,4 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" ...>
+// PEER-AUTOFIX start [findingId=undefined rule=http-not-https analyzer=autofix ts=1759730548275]
+// <project xmlns="http://maven.apache.org/POM/4.0.0" ...>
+<project xmlns="https://maven.apache.org/POM/4.0.0" ...>
+// PEER-AUTOFIX end [findingId=undefined]
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.test</groupId>
   <artifactId>vuln</artifactId>
