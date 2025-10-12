@@ -1,10 +1,22 @@
+<!-- PEER-AUTOFIX start [findingId=undefined rule=missing-meta-description analyzer=autofix ts=1760254111380] -->
+<!-- <!doctype html>
+ -->
 <!doctype html>
+<!-- PEER-AUTOFIX end [findingId=undefined] -->
 <html>
 <head>
   <title>Test</title>
+<!-- PEER-AUTOFIX start [findingId=undefined rule=inline-javascript analyzer=autofix ts=1760254111380] -->
+<!--   <script>
+ -->
   <script>
+<!-- PEER-AUTOFIX end [findingId=undefined] -->
     // inline JS XSS risk
+<!-- PEER-AUTOFIX start [findingId=undefined rule=document-write analyzer=autofix ts=1760254111380] -->
+<!--     document.write(location.hash);
+ -->
     document.write(location.hash);
+<!-- PEER-AUTOFIX end [findingId=undefined] -->
   </script>
 </head>
 <body>

@@ -1,3 +1,7 @@
 /* messy CSS */
+/* PEER-AUTOFIX start [findingId=undefined rule=color-name-instead-of-hex analyzer=autofix ts=1760254111401] */
+/* body {    background: white;; }
+ */
 body {    background: white;; }
+/* PEER-AUTOFIX end [findingId=undefined] */
 .unused { color: #ffffff; }
