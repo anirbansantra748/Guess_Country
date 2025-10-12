@@ -1,7 +1,8 @@
-public class b {
-    public static void main(String[] args) {
-        //write some java code that have errors multiple errors
-        System out println("Hello world")
+public class b
+{
+ public static void main(String args)
+ {
+ System out println("Hello world")
  int a = 10;
  float b = 5.0
  String name = 'Opi';
@@ -24,6 +25,5 @@ public class b {
  public static void methodcall
  {
  System.out.println("Method called")
-
-    }
+ }
 }
