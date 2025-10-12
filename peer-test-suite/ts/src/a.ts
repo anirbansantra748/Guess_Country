@@ -1,17 +1,17 @@
-// ❌ Type errors and runtime issues
+
 interface User {
   id: number
   name: string
   age?: number
 }
 
-const user: User = { id: "1", name: 42 } // ❌ Wrong types
+const user: User = { id: "1", name: 42 } 
 
 function greet(user: User): string {
-  return "Hello " + user.fullName // ❌ Property doesn't exist
+  return "Hello " + user.fullName 
 }
 
-let result: number = greet(user) // ❌ Return type mismatch
+let result: number = greet(user) 
 
-// ❌ Missing return
+
 const calc = (a: number, b: number): number => { a + b }
