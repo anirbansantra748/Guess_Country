@@ -12,4 +12,4 @@ Test suite repo designed to trigger analyzers across languages & infra:
 Usage:
 1. Clone and push to GitHub.
 2. Create a PR or push commits to trigger your analyzer.
-3. Inspect findings in your app / MongoDB.
+3. Inspect findings in your app / MongoDB..
