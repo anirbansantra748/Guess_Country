@@ -1,0 +1,13 @@
+{
+  "name": "peer-test-js",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "4.15.0",
+    "lodash": "4.17.4",
+    "axios": "0.18.0"
+  }
+}

@@ -1,0 +1,12 @@
+<project xmlns="https://maven.apache.org/POM/4.0.0" ...> <!-- FIX: minimal fix -->
+ <!-- OLD: <project xmlns="https://maven.apache.org/POM/4.0.0" ...> --> <!-- FIX: minimal fix -->
+ <!-- OLD:  <!-- OLD: <project xmlns="https://maven.apache.org/POM/4.0.0" ...> --> --> <!-- FIX: minimal fix -->
+ <!-- OLD:  <!-- OLD:  <!-- OLD: <project xmlns="http://maven.apache.org/POM/4.0.0" ...> --> --> -->
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.test</groupId>
+  <artifactId>vuln</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <dependencies>
+    <!-- old fastjson or other risky libs could be added, but keeping simple -->
+  </dependencies>
+</project>

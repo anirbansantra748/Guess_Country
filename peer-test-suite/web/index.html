@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <title>Test</title>
+  <script>
+    // inline JS XSS risk
+    document.write(location.hash);
+  </script>
+</head>
+<body>
+  <h1>Test Page</h1>
+</body>
+</html>
