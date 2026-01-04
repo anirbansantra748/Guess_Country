@@ -5,8 +5,8 @@ public class c
  System out println("Hello world")
  int a = 10;
  float b = 5.0
- String name = 'Opi';
- if(a = 10)
+ String name = 'Opi';;;;
+ if(a = 10
  {
  System.out.println("ten")
  else
