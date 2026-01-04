@@ -8,9 +8,9 @@ public class c
  String name = "Opi"; // fixed: changed single quotes to double quotes
  if(a == 10) // fixed: changed assignment to comparison
  {
- System.out.println("ten");
+ System.out.println("ten
  }
- else
+ else5
  {
  System.out.println("not ten");
  }
