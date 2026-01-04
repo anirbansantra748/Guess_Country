@@ -4,9 +4,9 @@ public class b
  {
  System out println("Hello world")
  int a = 10;
- float b = 5.0
+ float b = 5.0;;
  String name = 'Opi';
- if(a = 10)
+ if(b = 10)
  {
  System.out.println("ten")
  else
