@@ -1,12 +1,14 @@
 <!doctype html>
-<html>
+<html lang="en"> <!-- Added lang attribute for accessibility and SEO -->
 <head>
+  <meta charset="UTF-8"> <!-- Added charset meta tag -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag for mobile responsiveness -->
+  <meta name="description" content="Test page for peer review"> <!-- Added meta description for SEO -->
   <title>Test</title>
-  <script>
-    // inline JS XSS risk
-    document.write(location.hash);
-  </script>
+  <!-- Moved script to external file to avoid inline JavaScript -->
+  <script src="script.js"></script>
 </head>
 <body>
   <h1>Test Page</h1>
 </body>
+</html>
