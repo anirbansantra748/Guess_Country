@@ -3,7 +3,7 @@ public class c
     public static void main(String args)
     {
         System.out.println("Hello world"); // fixed: added missing semicolon
-        int a = 10
+        int a = 10;
         float b = 5.0f; // fixed: added 'f' suffix for float literal
         String name = "Opi"; // fixed: changed single quotes to double quotes
         if(a == 10) // fixed: changed assignment to comparison
