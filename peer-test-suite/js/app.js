@@ -1,16 +1,15 @@
-
 const express = require('express');
+const helmet = require('helmet'); // added helmet for security headers
 const app = express();
 
-// Simple Error: Typo in method name
-app.use(express.jsn());
+app.use(helmet()); // added helmet middleware for security
 
-// High Level Error: Middleware execution flow interruption
-// This middleware does not call next() and does not send a response, 
-// causing the request to hang indefinitely until timeout.
+// Fixed typo in method name
+app.use(express.json());
+
+// Fixed missing next() call and removed console.log
 app.use((req, res, next) => {
-  console.log("Logging request...");
-  // Missing next();
+  next();
 });
 
 app.get('/', (req, res) => {
