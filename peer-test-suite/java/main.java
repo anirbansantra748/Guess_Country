@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        // Simple Error: 'system' should be 'System' (case-sensitive)
-        system.out.println("Starting application...");
+        // Fixed: Changed 'system' to 'System' (case-sensitive)
+        System.out.println("Starting application...");
 
         // High Level Error: Infinite recursion leading to StackOverflowError
         processData(10);

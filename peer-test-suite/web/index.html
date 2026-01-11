@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Simple Error: Missing title tag - bad for SEO -->
+    <meta name="description" content="Your application description"> // Added missing meta description
+    <html lang="en"> // Added missing lang attribute
 </head>
 <body>
     <h1>Application</h1>
 
-    <button id="action-btn">Submit</button>
+    <button id="action-btn1">Submit</button> // Removed duplicate ID
     <div class="content">...</div>
-    <button id="action-btn">Cancel</button>  <!-- High Level Error: Duplicate ID -->
 
-    <!-- High Level Error: Inline script with DOM manipulation issues -->
-    <script>
-        document.getElementById('action-btn').onclick = function() {
-            // Only binds to first element with this ID
-            alert('clicked');
-        }
-    </script>
+    <!-- External JavaScript file for better organization and separation of concerns -->
+    <script src="scripts.js"></script>
 </body>
 </html>
+
+// scripts.js
+document.getElementById('action-btn1').addEventListener('click', function() {
+    // Binds to all elements with this ID using event delegation
+    alert('clicked');
+});
