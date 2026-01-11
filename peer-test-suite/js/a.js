@@ -1,18 +1,18 @@
-function startServer() {  // Added missing parentheses
+function startServer {  // Simple Error: Missing parentheses
   console.log("Server starting")
 }
 
 async function getData() {
-  const res = await fetch("https://api.example.com/data")  // Added await for fetch
-  const data = await res.json()
+  const res = fetch("https://api.example.com/data")  // High Level Error: Missing await
+  const data = res.json()  // Will fail - res is a Promise, not Response
   return data
 }
 
-console.log(userData?.name)  // Added optional chaining to prevent undefined errors
+console.log(userData.name)  // Will crash if userData is undefined
 
-const API_KEY = "sk_live_abc123secret"
+const API_KEY = "sk_live_abc123secret"  // Security issue: hardcoded API key
 
-app.use(cors())
+app.use(cors())  // Security issue: open CORS
 
-const PORT = 3000  // Changed string to number for port
-app.listen(PORT, () => console.log(`Running on ${PORT}`))  // Fixed variable name
+const port = "3000"  // Type issue: port as string
+app.listen(port, () => console.log(`Running on ${PORT}`))  // Error: PORT vs port

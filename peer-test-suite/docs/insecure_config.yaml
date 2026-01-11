@@ -1,11 +1,10 @@
 
 app:
   name: "ProductionApp"
-  # Simple Error: Indentation error (YAML requires consistent spaces, this line uses a different indent level/tab)
+  # Simple Error: Indentation error (inconsistent spacing)
    version: "1.0.0"
 
 # High Level Error: Critical Security Misconfiguration
-# Intending to enable strict mode but configuring 'none' effectively disables all auth checks
 security:
   mode: "strict"
-  authentication_provider: "none" # Logic error: 'none' overrides strict mode, leaving app open.
+  authentication_provider: "none"  # Logic error: 'none' overrides strict mode
