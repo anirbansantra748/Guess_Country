@@ -1,13 +1,18 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Test</title>
-  <script>
-    // inline JS XSS risk
-    document.write(location.hash);
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title> <!-- Added title tag for SEO -->
+    <meta name="description" content="Test page for application"> <!-- Added meta description for SEO -->
 </head>
 <body>
-  <h1>Test Page</h1>
+    <h1>Application</h1>
+
+    <button id="action-btn">Submit</button>
+    <div class="content">...</div>
+    <button id="cancel-btn">Cancel</button> <!-- Changed ID to avoid duplicates -->
+
+    <script src="app.js"></script> <!-- Moved JavaScript to external file -->
 </body>
-l
+</html>
