@@ -1,22 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Added lang attribute for accessibility -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Simple Error: Missing title tag - bad for SEO -->
+    <meta name="description" content="Application page description"> <!-- Added meta description for SEO -->
+    <title>Application</title> <!-- Added title tag for SEO -->
 </head>
 <body>
     <h1>Application</h1>
 
-    <button id="action-btn">Submit</button>
+    <button id="submit-btn">Submit</button> <!-- Changed ID to be unique -->
     <div class="content">...</div>
-    <button id="action-btn">Cancel</button>  <!-- High Level Error: Duplicate ID -->
+    <button id="cancel-btn">Cancel</button> <!-- Changed ID to be unique -->
 
-    <!-- High Level Error: Inline script with DOM manipulation issues -->
+    <!-- Moved to external file in practice, but kept here for demonstration -->
     <script>
-        document.getElementById('action-btn').onclick = function() {
+        document.getElementById('submit-btn').onclick = function() {
             // Only binds to first element with this ID
-            alert('clicked');
+            console.log('clicked'); // Replaced alert with console.log for better UX
         }
     </script>
 </body>

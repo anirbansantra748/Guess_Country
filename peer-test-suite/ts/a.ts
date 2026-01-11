@@ -1,21 +1,27 @@
+import { expect } from 'chai';
+import { describe, it } from 'mocha';
+
 interface User {
   id: number;
   name: string;
 }
 
-// Simple Error: Typo in 'interface' keyword
-intrface Admin {
+interface Admin {
   role: string;
 }
 
-// High Level Error: Missing async/await handling
-function fetchUserData(id: number) {
-  let data;
-  setTimeout(() => {
-    data = { id, name: "Test" };
-  }, 100);
-  return data;  // Returns undefined because setTimeout is async
+function fetchUserData(id: number): Promise<User> {  // Added return type Promise<User>
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve({ id, name: "Test" });
+    }, 100);
+  });
 }
 
-const user = fetchUserData(1);
-console.log(user.name);  // Will crash - user is undefined
+describe('User Tests', () => {
+  it('should fetch user data', async () => {  // Added async to handle Promise
+    const user = await fetchUserData(1);  // Using await to properly handle async
+    expect(user).to.exist;
+    expect(user.name).to.equal('Test');
+  });
+});
