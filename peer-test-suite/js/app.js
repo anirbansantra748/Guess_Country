@@ -1,11 +1,20 @@
-// entry
+
 const express = require('express');
-const insecure = require('./insecure');
 const app = express();
 
-app.use('/', insecure.router);
-app.use(express.json());
+// Simple Error: Typo in method name
+app.use(express.jsn());
 
-app.listen(3000, () => {
-  console.log('Server listening on 3000');
+// High Level Error: Middleware execution flow interruption
+// This middleware does not call next() and does not send a response, 
+// causing the request to hang indefinitely until timeout.
+app.use((req, res, next) => {
+  console.log("Logging request...");
+  // Missing next();
 });
+
+app.get('/', (req, res) => {
+  res.send('Hello World');
+});
+
+app.listen(3000);
