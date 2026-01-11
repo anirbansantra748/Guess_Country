@@ -4,15 +4,18 @@ export default function UserProfile() {
     const [user, setUser] = useState(null);
     const [error, setError] = useState(false);
 
-    // Fixed: Moved useEffect outside of conditional to comply with Rules of Hooks
+    // Fix 1: Move useEffect outside of conditional to avoid violating Rules of Hooks
     useEffect(() => {
-        // Added pagination parameters to prevent large dataset fetches
-        fetch('/api/user?page=1&limit=10').then(u => setUser(u));
-    }, []); // Added empty dependency array to prevent infinite re-renders
+        // Fix 2: Add dependency array to prevent infinite re-renders
+        fetch('/api/user')
+            .then(u => setUser(u))
+            .catch(e => setError(true));
+    }, []); // Fix 3: Add empty dependency array
 
+    // Fix 4: Close the 'h1' tag properly
     return (
         <div className="profile">
-            <h1>User Profile</h1>  // Fixed: Corrected closing tag syntax
+            <h1>User Profile</h1>
             <p>{user ? user.name : 'Loading...'}</p>
         </div>
     );

@@ -1,15 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-        // Fixed: Changed 'system' to 'System' to match Java's case-sensitive syntax
+        // Fixed: Changed 'system' to 'System' (case-sensitive)
         System.out.println("Starting application...");
 
         // High Level Error: Infinite recursion leading to StackOverflowError
-        // This represents a logic error that passes compilation (if syntax was fixed) but fails at runtime
         processData(10);
     }
 
     public static void processData(int value) {
-        // Missing base case
+        // Missing base case - will cause StackOverflowError
         processData(value + 1);
     }
 }
