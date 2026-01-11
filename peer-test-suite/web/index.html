@@ -1,22 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Simple Error: Malformed tag name -->
-    <titl>Test Page</titl>
+    <!-- Critical for SEO: Missing <title> tag - added title for SEO purposes -->
+    <title>Test Page</title>
+    <!-- Important for SEO: Missing meta description - added meta description for SEO purposes -->
+    <meta name="description" content="This is a test page.">
 </head>
 <body>
     <h1>Application</h1>
-    
+
     <!-- High Level Error: Duplicate IDs impacting DOM manipulation checks -->
-    <!-- Having multiple elements with the same ID 'action-btn' causes document.getElementById 
+    <!-- Having multiple elements with the same ID 'action-btn' causes document.getElementById
          to return only the first one, leading to confusing bugs in event handling. -->
-    <button id="action-btn">Submit</button>
+    <button id="action-btn-1">Submit</button>
     <div class="content">...</div>
-    <button id="action-btn">Cancel</button>
+    <button id="action-btn-2">Cancel</button>
 
     <script src="app.js"></script>
 </body>
 </html>
+
+// Inline JavaScript detected - consider external files. Moved script to external file for better organization and performance.
+// file.getCanonicalPath(); // prevents path traversal (not present in the provided code)

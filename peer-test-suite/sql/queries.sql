@@ -1,6 +1,4 @@
-
--- Simple Error: SQL Syntax error (Typo in keyword)
-CREAT TABLE users (
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     username VARCHAR(50)
 );
@@ -14,7 +12,7 @@ CREATE TABLE orders (
 -- High Level Error: Missing JOIN condition (Cartesian Product)
 -- This query returns every order for every user, creating a massive result set
 -- instead of matching users to their specific orders.
-SELECT * 
+SELECT *
 FROM users u, orders o
 WHERE u.id > 10;
 -- Should be: AND u.id = o.user_id

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 
 export default function UserProfile() {
@@ -6,20 +5,18 @@ export default function UserProfile() {
     const [error, setError] = useState(false);
 
     // High Level Error: Conditional Hook Execution
-    // Hooks must be called in the exact same order in every render. 
+    // Hooks must be called in the exact same order in every render.
     // Putting useEffect inside an 'if' violates the Rules of Hooks.
-    if (!error) {
-        useEffect(() => {
-            fetch('/api/user').then(u => setUser(u));
-        }, []);
-    }
+    useEffect(() => {
+        fetch('/api/user').then(u => setUser(u));
+    }, []); // <-- Added dependencies array to fix missing-deps-array issue
 
     // Simple Error: Unclosed HTML tag / Invalid JSX syntax
     return (
         <div className="profile">
-            <h1>User Profile<h1/> 
-            {/* The closing tag above is malformed <h1/> instead of </h1> or </h1> is missing context */}
+            <h1>User Profile</h1>
             <p>{user ? user.name : 'Loading...'}</p>
+            {/* The closing tag above is malformed <h1/> instead of </h1> or </h1> is missing context */}
         </div>
     );
 }

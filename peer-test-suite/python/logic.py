@@ -1,16 +1,16 @@
-
-def analyze_data(data, cache=[]):
-    # High Level Error: Mutable default argument 'cache' retains state between calls
-    # leading to unexpected data leakage across different function calls.
+def analyze_data(data, cache=None):
+    # Fixed: Changed mutable default argument to None and initialized as empty list
+    if cache is None:
+        cache = []
     cache.append(data)
     return len(cache)
 
 def main():
-    # Simple Error: Syntax error (Case sensitivity in function name)
-    Print("Starting analysis")
-    
+    # Fixed: Corrected case sensitivity in print function
+    print("Starting analysis")
+
     print(analyze_data("User1"))
-    print(analyze_data("User2")) # Will return 2, expected 1 if creating fresh cache
+    print(analyze_data("User2"))  # Fixed: Now returns 1 as expected with fresh cache
 
 if __name__ == "__main__":
     main()
