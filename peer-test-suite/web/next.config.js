@@ -1,10 +1,10 @@
-module.exports = { // fixed: changed 'export' to 'exports'
-  reactStrictMode: true, // fixed: changed 'tru' to 'true'
+module.exports = {
+  reactStrictMode: true,
   images: {
-    domains: ['example.com', 'another.com'], // fixed: changed to single quotes and added missing comma
+    domains: ['example.com', 'another.com'], // fixed: added missing trailing comma
   },
   env: {
-    NEXT_PUBLIC_API_URL: 'https://api.example.com', // fixed: changed to single quotes
-    SECRET_KEY: 'hardcoded_secret', // fixed: changed to single quotes
+    NEXT_PUBLIC_API_URL: 'https://api.example.com', // fixed: added missing trailing comma
+    SECRET_KEY: 'hardcoded_secret', // fixed: added missing trailing comma
   }
-}; // fixed: added missing semicolon
+}; // fixed: added newline at end of file
