@@ -2,7 +2,7 @@ public class b
 {
  public static void main(String args);
  {
- System.out.println("Hello world"); // fixed: corrected System.out.println
+ System.out.println("Hello world") // fixed: corrected System.out.println
  int a = 10;
  float b = 5.0; // fixed: removed extra semicolon
  String name = "Opi"; // fixed: changed single quotes to double quotes
@@ -16,7 +16,7 @@ public class b
  }
  for(int i = 0; i < 5; i++) // fixed: added missing semicolon
  {
- System.out.println("i:" + i); // fixed: added missing semicolon
+ System.out.println("i:" + i // fixed: added missing semicolon
  }
  while(a > 0) // fixed: corrected typo (whle to while)
  {
