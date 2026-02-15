@@ -1,4 +1,5 @@
-import { addNumbers } from "./utils.js";
+"use strict";
+const addNumbers = require("./utils.js").addNumbers;
 
 function main() {
   const a = 10;
